@@ -17,7 +17,6 @@ title: Audacity site
 description: >- # this means to ignore newlines until "baseurl:"
   Audacity site
 url: "https://dilsonspickles.github.io" # the base hostname & protocol for your site
-baseurl: "/docker-jekyll-audasitey" # the subpath of your site, e.g. /blog
 build: 3
 email: www.audacityteam.org@gmail.com
 phone: +7 (495) 150-53-05
