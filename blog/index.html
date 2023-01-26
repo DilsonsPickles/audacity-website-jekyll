@@ -9,7 +9,7 @@ h1: Blog
 <div>
 
     <!-- This loops through the paginated posts -->
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     <div class="left-post">
         {% if post.image %}
         <img src="{{ post.image }}" alt="{{ post.title }}">
