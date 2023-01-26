@@ -13,7 +13,6 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-url: "https://dilsonspickles.github.io" # the base hostname & protocol for your site
 title: ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ И АНОНИМНОЙ ПОМОЩИ МАЙПСИХЕЛС - MYPSYHEALTH В МОСКВЕ
 build: 3
 email: mypsyhealthnew@gmail.com
@@ -34,7 +33,7 @@ social:
 
 description: >- # this means to ignore newlines until "baseurl:"
   Центр психического здоровья и анонимной помощи Майпсихелс - Mypsyhealth в Москве. Частная наркологическая, психиатрическая, неврологическая и психологическая помощь. Работаем круглосуточно.
-baseurl: "/docker-jekyll-audasitey" # the subpath of your site, e.g. /blog
+url: "/docker-jekyll-audasitey"
 #twitter_username: jekyllrb
 #github_username:  jekyll
 paginate: 5 # !!!!!!!!!!! no change after search indexing
