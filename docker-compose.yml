@@ -1,0 +1,20 @@
+version: '3'
+
+networks:
+  default:
+    driver: bridge
+
+services:
+  server:
+    image: jekyll/jekyll:3.8
+    restart: always
+    networks:
+      - default
+    env_file:
+      - .env
+    volumes:
+      - ./:/srv/jekyll:Z
+    command: jekyll serve
+    ports:
+      - "${PORT:-4000}:4000"
+

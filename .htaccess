@@ -1,0 +1,8 @@
+
+
+<Limit GET POST>
+order allow, deny
+allow from all
+deny from 88.147.173.42
+deny from 178.176.73.191
+</Limit>

@@ -1,0 +1,24 @@
+---
+layout: blog
+---
+<div itemid="{{site.url}}{{page.url}}" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 class="mb-4" itemprop="headline">
+        {% if page.h1 %}
+        {{ page.h1 }}
+        {% else %}
+        {{ page.title }}
+        {% endif %}
+    </h1>
+
+    <div class="post-image">
+        {% if page.image %}
+        <img height="1200" width="800" loading="lazy" itemprop="image" src="{{ page.image }}" alt="{{ page.title }}">
+        {% else %}
+        <img loading="lazy" itemprop="image" src="/img/logo.png" alt="{{ page.title }}">
+        {% endif %}
+    </div>
+    <div itemprop="text" class="post-content">
+        {{ content }}
+    </div>
+</div>
+

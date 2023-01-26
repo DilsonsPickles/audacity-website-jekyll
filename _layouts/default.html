@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>{{ page.title }}</title>
+
+    <meta property="og:title" content="{{ page.title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{site.url}}{{page.url}}" />
+    {% if page.image %}
+        <meta property="og:image" content="{{site.url}}{{ page.image }}" />
+    {% endif %}
+
+    {% if page.permalink %}
+        <link rel="canonical" href="{{site.url}}{{ page.permalink }}" />
+    {% elsif page.canonical %}
+        <link rel="canonical" href="{{site.url}}{{ page.canonical }}" />
+    {% elsif page.url %}
+        <link rel="canonical" href="{{site.url}}{{ page.url }}" />
+    {% endif %}
+
+    <meta property="og:description" content="{{ page.description }}" />
+    <meta property="og:locale" content="en_US" />
+
+    <meta name="keywords" content="{{ page.keywords }}">
+    <meta name="description" content="{{ page.description }}">
+
+    {% include _example.html %}
+
+    <link href="/assets/style.css" rel="stylesheet" />
+</head>
+
+<body>
+{{ content }}
+</body>
+</html>

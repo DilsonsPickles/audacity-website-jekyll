@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+{% if template != 'index' %}
+<h1>This is not main page</h1>
+{% endif %}
+
+<div>
+    <h1>
+        {% if page.h1 %}
+        {{ page.h1 }}
+        {% else %}
+        {{ page.title }}
+        {% endif %}
+    </h1>
+
+    {{ content }}
+</div>
+
+
+

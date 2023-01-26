@@ -1,0 +1,74 @@
+---
+layout: blog
+title: Blog
+description: Blog description
+h1: Blog
+---
+
+
+<div>
+
+    <!-- This loops through the paginated posts -->
+    {% for post in paginator.posts %}
+    <div class="left-post">
+        {% if post.image %}
+        <img src="{{ post.image }}" alt="{{ post.title }}">
+        {% else %}
+        <img src="/img/logo.png" alt="{{ post.title }}">
+        {% endif %}
+
+        <div class="post-text">
+            <div class="meta-tags">
+                <i class="far fa-calendar-check"><span>{{ post.date | date: '%B %d, %Y' }}</span></i>
+
+                {% if post.author %}
+                <i class="far fa-user"><span> {{ post.author }}</span></i>
+                {% endif %}
+
+            </div>
+            <h5><a href="{{ post.url }}">{{ post.title }}</a></h5>
+            {{ post.excerpt }}
+            <a href="{{ post.url }}" class="button secondary">Читать дальше</a>
+        </div>
+    </div><!-- Left Post /-->
+    {% endfor %}
+
+
+</div><!-- Grid Container -->
+
+
+<div class="page-filter">
+    <div class="pagination-container">
+        <ul class="pagination" role="menubar" aria-label="Pagination">
+
+            {% if paginator.previous_page %}
+            <li class="arrow">
+                <a href="{{ paginator.previous_page_path | relative_url }}">
+                    &laquo; Prev
+                </a>
+            </li>
+
+            {% else %}
+            <span>&laquo; Prev</span>
+            {% endif %}
+
+            {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+
+            <li class="current"><a href="{{ relative_url }}"> {{ page }}</a></li>
+
+            {% elsif page == 1 %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}">{{ page }}</a></li>
+            {% else %}
+            <li><a href="{{ site.paginate_path | relative_url | replace: ':num', page }}">{{ page }}</a></li>
+            {% endif %}
+            {% endfor %}
+
+            {% if paginator.next_page %}
+            <li class="arrow"><a href="{{ paginator.next_page_path | relative_url }}">Next »</a></li>
+            {% else %}
+            <span>Next &raquo;</span>
+            {% endif %}
+        </ul>
+    </div>
+</div>

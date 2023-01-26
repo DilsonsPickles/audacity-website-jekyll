@@ -1,0 +1,9 @@
+_site
+.idea
+.sass-cache
+.jekyll-metadata
+.DS_Store
+runtime
+.env
+.ssh
+_logs
