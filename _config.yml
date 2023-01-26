@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-url: "https://mypsyhealth.ru" # the base hostname & protocol for your site
+url: "https://dilsonspickles.github.io" # the base hostname & protocol for your site
 title: ЦЕНТР ПСИХИЧЕСКОГО ЗДОРОВЬЯ И АНОНИМНОЙ ПОМОЩИ МАЙПСИХЕЛС - MYPSYHEALTH В МОСКВЕ
 build: 3
 email: mypsyhealthnew@gmail.com
