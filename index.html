@@ -22,9 +22,23 @@ author: Audacity team
         the one in previous versions of Bootstrap. Check out the examples below
         for how you can remix and restyle it to your liking.
       </p>
-      <button class="btn btn-primary btn-lg" type="button">
-        Download for free
-      </button>
+      <a href="" id="downloadButton" class="btn btn-primary btn-lg" type="button">
+        Download now
+        <script>
+          if (navigator.platform.indexOf("Mac") > -1) {
+            document.getElementById("downloadButton").href="https://www.audacityteam.org/download/mac/"
+            console.log("Mac");
+          } 
+          else if (navigator.platform.indexOf('Win') > -1) {
+            document.getElementById("downloadButton").href="https://www.audacityteam.org/download/windows/"
+            console.log("Win")
+          }
+          else if (navigator.platform.indexOf('Lin') > -1) {
+            document.getElementById("downloadButton").href="https://www.audacityteam.org/download/linux/"
+            console.log("Lin")
+          }
+        </script>
+      </a>
     </div>
   </div>
 </section>
