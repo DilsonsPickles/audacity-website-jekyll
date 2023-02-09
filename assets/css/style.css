@@ -1,0 +1,45 @@
+h1 {
+    font-size: 56px;
+}
+
+p {
+    font-size: 18px;
+}
+
+.callout {
+    font-size: 21px
+}
+
+.heroSection {
+    height: 75vh;
+}
+
+.vanity-metric h1 {
+    margin: 0px;
+}
+
+.our-story {
+    margin-top: 184px;
+    margin-bottom: 184px;
+}
+
+.meet-the-team {
+    margin-top: 184px;
+    margin-bottom: 184px;
+}
+
+.card--team-member {
+    padding: 16px;
+    height: 240px;
+    display: flex;
+    align-items: end;
+    border: 1px solid grey;
+    box-sizing: border-box;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 24px;
+}
+
